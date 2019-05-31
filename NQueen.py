@@ -1,4 +1,3 @@
-
 import matplotlib.pyplot as plt
 import numpy as np
 import random
@@ -18,30 +17,30 @@ def InitFirstPopulation(Queens, Solutions):
 
     return Population    
 
-def CostFunctionAll(A):   
-    for i in range(0 , len(A)):       
-        A[i, 8] = CostFunction(A[i])
+def CostFunctionAll(Solutions):   
+    for i in range(0 , len(Solutions)):       
+        Solutions[i, 8] = CostFunction(Solutions[i])
         
-    B = np.array(A)
+    B = np.array(Solutions)
     return np.array(sorted(B, key=lambda x :x[-1]))
 
-def CostFunction(A):
+def CostFunction(Chromosome):
     Threats = 0
-    Queens = len(A) - 1
+    Queens = len(Chromosome) - 1
         
     for i in range(0 , Queens):                
-        value = A[i]
+        value = Chromosome[i]
         for j in range(i + 1, Queens):
             #line Threats
-            if(value == A[j] and j != i):
+            if(value == Chromosome[j] and j != i):
                 Threats = Threats + 1               
             
             #Cross Threats
-            if(abs(j - i) + value == A[j]):                
+            if(abs(j - i) + value == Chromosome[j]):                
                 Threats = Threats + 1               
             
             #Cross Threats
-            if(abs(abs(j - i) - value) == A[j]):                
+            if(abs(abs(j - i) - value) == Chromosome[j]):                
                 Threats = Threats + 1               
     return Threats
 
@@ -116,16 +115,13 @@ Queens = 8
 NumberOfSolutions = 100
 Solutions = InitFirstPopulation(Queens, NumberOfSolutions)
 Solutions = CostFunctionAll(Solutions)    
-
 CrossOverNumber = 40
 MutationNumber = 30
 NewPopulationNumber = 110
-
 Epochs = 100
 BestSolutions = [None] * Epochs
 AVGSolutions = [None] * Epochs
 AllSolutions = [None] * Epochs
-
 AllSolutions[0] = Solutions
 BestSolutions[0] = Solutions[0,8]
 AVGSolutions[0] = np.average(Solutions[:,8])
