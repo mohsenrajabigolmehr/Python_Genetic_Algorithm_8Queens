@@ -7,5 +7,5 @@ http://shdu.ac.ir/
 <br>
 ![alt text](https://github.com/mohsenrajabigolmehr/Python_Genetic_Algorithm_8Queens/blob/master/Result.PNG)
 <br>
-![alt text](https://github.com/mohsenrajabigolmehr/Python_Genetic_Algorithm_8Queens/blob/master/ChessBoard.PNG)
+![alt text](https://github.com/mohsenrajabigolmehr/Python_Genetic_Algorithm_8Queens/blob/master/ChessBoard.png)
 
