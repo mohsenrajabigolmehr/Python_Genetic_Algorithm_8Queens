@@ -3,6 +3,6 @@ Solving 8 Queens Problem Using Genetic Algorithm In Python
 <br>
 http://shdu.ac.ir/
 <br>
-![alt text](https://github.com/mohsenf35/8Queens/blob/master/Picture.png)
+![alt text](https://github.com/mohsenrajabigolmehr/Python_Genetic_Algorithm_8Queens/blob/master/Picture.png)
 <br>
-![alt text](https://github.com/mohsenf35/8Queens/blob/master/Result.PNG)
+![alt text](https://github.com/mohsenrajabigolmehr/Python_Genetic_Algorithm_8Queens/blob/master/Result.PNG)
